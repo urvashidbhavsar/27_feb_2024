@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- apply link on image shapes -->
+    <img src="myimage.webp" alt="" usemap="#mymap">
+
+    <map name="mymap">
+        <area shape="rect" coords="474,70,625,268" href="https://codepen.io/yoannhel/pen/DMzjog" alt="" target="_blank">
+
+        <!-- 
+            x1 = 61, y1 = 346 x2 = 116
+            r = x2 - x1 = 116 - 61 = 55
+         -->
+        <area shape="circle" coords="61,343,55" href="myimage.webp" alt="" target="_blank">
+
+        <area shape="poly" coords="386,272,385,281,380,294,374,303,367,309,356,315,343,317,331,316,321,313,314,309,308,301,303,294,299,284,298,273" href="https://jsonplaceholder.typicode.com/" alt="" target="_blank">
+    </map>
+</body>
+</html>

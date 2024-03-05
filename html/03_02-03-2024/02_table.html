@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        table => is a collection of rows and columns 
+        cell => it is a box which generate from rows and column
+
+        for create table => <table>
+        for create a row => <tr> table row 
+        for create a column/set data => <td> table data 
+        for create table heading => <th> table heading 
+        for given table title => <caption>
+        for set table body => <tbody>
+        for create table footer => <tfoot>
+
+        cellpadding = give a space between content and cell border
+        cellspacing = give a space between cells
+        when we set rules all cellspacing not effected
+
+     -->
+
+     <table border="1" cellpadding="10px" cellspacing="5px" rules="all" style="text-align: center;">
+        <caption>my table data</caption>
+        <tr style="background-color: grey;">
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>Rohit</td>
+                <td>Male</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Ruchi</td>
+                <td>Female</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Dev</td>
+                <td>Male</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+        <!-- <tfoot>
+            <tr>
+                <td>my footer</td>
+            </tr>
+        </tfoot> -->
+     </table>
+</body>
+</html>
