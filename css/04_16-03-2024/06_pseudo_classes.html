@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo classes start with : symbol */
+        .link1:any-link {
+            color: blue;
+        }
+
+        .link2:visited {
+            color: firebrick;
+        }
+
+        .link3:active {
+            color: cornflowerblue;
+        }
+
+        .link4:hover {
+            color: cadetblue;
+        }
+
+        .btn {
+            padding: 5px 20px;
+            background-color: blue;
+            border: 1px solid blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: blue;
+        }
+
+        .btn:active {
+            box-shadow: 0px 0px 5px blue;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        input:focus {
+            border: 3px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="" class="link1">Link1</a>
+    <a href="" class="link2">Link2</a>
+    <a href="" class="link3">Link3</a>
+    <a href="" class="link4">Link4</a>
+    <br><br>
+    <button class="btn">click</button>
+
+    <input type="text" name="" id="">
+</body>
+
+</html>

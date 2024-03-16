@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: 400px;
+            border: 2px solid black;
+        }
+
+        .myimg {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .newimg {
+            height: 200px;
+            width: 200px;
+            /* cover | contains | scale-down | none | fill (default)*/
+            object-fit: cover;
+            /* top | bottom |left|right|center | % |px */
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736881_640.jpg" alt="" class="myimg">
+    </div> <br><br>
+
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736881_640.jpg" alt="" class="newimg">
+    </div>
+</body>
+
+</html>

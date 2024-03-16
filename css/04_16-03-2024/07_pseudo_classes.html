@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            /* border-collapse: separate; */
+            /* border-spacing: 3px; */
+            text-align: center;
+        }
+
+        td,
+        th {
+            padding: 5px;
+        }
+
+        /* nth-child used when element or classname equal */
+        tr:nth-child(odd) {
+            background-color: cadetblue;
+        }
+
+        tr:nth-child(even) {
+            background-color: chocolate;
+        }
+
+        .title:first-child {
+            background-color: black;
+            color: white;
+        }
+
+        .footer:last-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <thread>
+            <tr class="title">
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr>
+                <td>Rohit</td>
+                <td>Male</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Ruchi</td>
+                <td>Female</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Dev</td>
+                <td>Male</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Yash</td>
+                <td>Male</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="footer">
+                <td colspan="3">my data</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
