@@ -1,0 +1,14 @@
+how to show your element on webpage.
+
+values : 
+
+inline
+inline-block
+block (default)
+none
+flex
+inline-flex
+grid 
+inline-grid 
+table
+inline-table 

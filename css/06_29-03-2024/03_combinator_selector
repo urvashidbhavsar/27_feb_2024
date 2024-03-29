@@ -1,0 +1,8 @@
+(1) descendent selector (parent child (space))
+
+(2) child selector (symbol > )
+
+(3) adjucent selector (symbol +)
+priority given always first element
+
+(4) sibling selector (symbol ~)
