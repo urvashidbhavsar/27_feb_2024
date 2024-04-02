@@ -1,0 +1,18 @@
+set element flexibally in a row.
+
+list of property which is only effected while apply flex.
+(1) flex-grow (child element)
+(2) flex-shrink (child element)
+(3) flex-basis (child element)
+(4) flex (child element)
+(5) flex-direction 
+(6) flex-wrap 
+(7) flex-flow 
+(9) justify-content 
+(10) align-items 
+(11) align-content 
+(12) align-self (child element)
+(13) gap (row-gap, column-gap)
+
+justify => word => effect horizontally 
+align => word => effect vertically 
