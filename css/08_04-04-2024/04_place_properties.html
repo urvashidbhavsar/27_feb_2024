@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .mydiv {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            margin: auto;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            display: grid;
+
+            /* short hand of justify-content and align-content 
+                if we set flex we need to apply wrap property. while grid not required it easily effected
+            */
+            /* place-content: center; */
+            /* justify-content: center; */
+            /* align-content: center; */
+
+            /* short hand of justify-items and align-items 
+            if we set flex only align-items effected, while apply grid both effected */
+            /* place-items: center; */
+            /* justify-items: center; */
+            /* align-items: center; */
+        }
+
+        .material-symbols-outlined {
+            font-size: 40px;
+
+            /* short hand of justify-self and align-self 
+            if we set flex only align-self effected, while apply grid both effected */
+            place-self: center;
+            /* justify-self: center; */
+            /* align-self: flex-end; */
+        }
+
+        /* in short all 6 property effected in grid
+            justify-items 
+            justify-self
+        
+            => all 4 property effected in flex
+            jusfity-content 
+            align-content 
+            align-items 
+            align-self
+        */
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <span class="material-symbols-outlined">
+            keyboard_command_key
+        </span>
+    </div>
+</body>
+
+</html>

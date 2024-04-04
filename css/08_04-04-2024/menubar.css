@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* set  complusory */
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* common class */
+.container {
+    max-width: 1250px;
+    margin   : auto;
+}
+
+.tb-space {
+    padding-top   : 10px;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =======================  */
+header {
+    background-color: aliceblue;
+}
+
+header .menubar {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+header .menubar .logo img {
+    width: 100px;
+}
+
+header .menubar .menu ul {
+    display    : flex;
+    align-items: center;
+    gap        : 30px;
+}
+
+header .menubar .menu ul a {
+    color      : #06065a;
+    font-weight: 600;
+}
+
+header .menubar .searchbtn {
+    padding         : 5px 15px;
+    display         : flex;
+    align-items     : center;
+    background-color: rgb(228, 228, 228);
+    border          : 2px solid rgb(228, 228, 228);
+    border-radius   : 40px;
+    cursor          : pointer;
+}
+
+header .menubar .searchbtn:hover {
+    border: 2px solid #06065a;
+}
