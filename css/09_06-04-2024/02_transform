@@ -1,0 +1,26 @@
+transform => how to show your element shape on page. 
+
+rotation element
+(1) rotate() (2) rotateX() (3) rotateY() (4) rotateZ() (5) rotate3d
+ rotate 
+ 
+zooming element
+(1) scale() (2) scaleX() (3) scaleY() (4) scaleZ() (5) scale3d()
+scale 
+
+stretch from angles 
+(1) skew() (2) skewX() (4) skewY()
+
+movement element
+(1) translate() (2) translateX() (3) translateY() (4) translateZ (5) translate3d()
+translate
+
+matrix 
+(1) matrix 
+(2) matrix3d 
+
+for element view 
+(1) perspective()
+(2) perspecitve 
+
+https://ramlmn.github.io/visualizing-matrix3d/

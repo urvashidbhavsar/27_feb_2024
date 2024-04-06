@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+            margin: 50px auto;
+            transition: 0.5s ease;
+        }
+
+        .mydiv:hover {
+            /* transform: translate(40px, 30px); */
+            /* translate: 30px; => only for x  */
+            /* transform: translateX(40px); */
+            /* transform: translateY(50px); */
+            /* transform: translateZ(40px); */
+            transform: translate3d(30px, 20px, 10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">my div</div>
+</body>
+
+</html>
