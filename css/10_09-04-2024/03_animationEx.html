@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .position {
+            height: auto;
+            width: 300px;
+            margin: 200px auto;
+        }
+
+        .div {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+
+        .setdiv {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .div1 {
+            background-color: blue;
+            animation: div1 0.5s cubic-bezier(0.43, 0.2, 0.84, 0.42) 1s;
+        }
+
+        .div2 {
+            background-color: crimson;
+            animation: div2 0.5s cubic-bezier(0.43, 0.2, 0.84, 0.42) 2s;
+        }
+
+        .div3 {
+            background-color: green;
+            animation: div3 0.5s cubic-bezier(0.43, 0.2, 0.84, 0.42) 3s;
+        }
+
+        .div4 {
+            background-color: firebrick;
+            animation: div4 0.5s cubic-bezier(0.43, 0.2, 0.84, 0.42) 4s;
+        }
+
+        .div5 {
+            background-color: olive;
+            animation: div5 0.5s cubic-bezier(0.43, 0.2, 0.84, 0.42) 5s;
+        }
+
+        /* create an animation */
+        @keyframes div1 {
+            100% {
+                box-shadow: 0 0 5px 9px rgb(0 0 255 / 40%), 0px 0px 5px 18px rgb(0 0 255 / 20%);
+            }
+        }
+
+        @keyframes div2 {
+            100% {
+                box-shadow: 0 0 5px 9px rgb(220 20 60 / 40%), 0px 0px 5px 18px rgb(220 20 60 / 20%);
+            }
+        }
+
+        @keyframes div3 {
+            100% {
+                box-shadow: 0 0 5px 9px rgb(0 128 0/40%), 0px 0px 5px 18px rgb(0 128 0 / 20%);
+            }
+        }
+
+        @keyframes div4 {
+            100% {
+                box-shadow: 0 0 5px 9px rgb(178 34 34 /40%), 0px 0px 5px 18px rgb(178 34 34 /20%)
+            }
+        }
+
+        @keyframes div5 {
+            100% {
+                box-shadow: 0 0 5px 9px rgb(128 128 0 / 40%), 0px 0px 5px 18px rgb(128 128 0/20%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position">
+        <div class="setdiv">
+            <div class="div div1"></div>
+            <div class="div div2"></div>
+            <div class="div div3"></div>
+            <div class="div div4"></div>
+            <div class="div div5"></div>
+        </div>
+    </div>
+</body>
+
+</html>

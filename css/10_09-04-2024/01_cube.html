@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube-position {
+            height: 200px;
+            width: 200px;
+            margin: 100px auto;
+            transform: translateZ(-100px);
+            /* perspective: 400px; */
+            /* transform: perspective(400px); */
+            /* set element view front and back */
+            perspective: 714px;
+            /* set element view from top, left, right, bottom, center*/
+            perspective-origin: 700px -105px;
+        }
+
+        .cube {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .box {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            font-size: 35px;
+            display: grid;
+            place-content: center;
+        }
+
+        .front {
+            background-color: rgba(95, 158, 160, 0.7);
+            transform: rotate(0deg) translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(255, 127, 80, 0.7);
+            transform: rotate(0deg) translateZ(-100px);
+        }
+
+        .left {
+            background-color: rgba(220, 20, 60, 0.7);
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+        .right {
+            background-color: rgba(0, 100, 0, 0.7);
+            transform: rotateY(-90deg) translateZ(-100px);
+        }
+
+        .top {
+            background-color: rgba(139, 0, 0, 0.7);
+            transform: rotateX(-90deg) translateZ(-100px);
+        }
+
+        .bottom {
+            background-color: rgba(47, 79, 79, 0.7);
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube-position">
+        <div class="cube">
+            <div class="box front">Front</div>
+            <div class="box back">Back</div>
+            <div class="box top">Top</div>
+            <div class="box bottom">Bottom</div>
+            <div class="box left">Left</div>
+            <div class="box right">Right</div>
+        </div>
+    </div>
+</body>
+
+</html>
