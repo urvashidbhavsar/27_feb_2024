@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+
+        .mybtns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 60px;
+            justify-items: center;
+        }
+
+        .btn {
+            padding: 7px 20px;
+            background-color: crimson;
+            color: white;
+            border: 2px solid crimson;
+            cursor: pointer;
+            transition: 0.5s ease all;
+        }
+
+        .btn1:hover {
+            background-color: transparent;
+            color: crimson;
+        }
+
+        .btn2 {
+            transition: 0.5s ease border;
+        }
+
+        .btn2:hover {
+            border: 2px dashed white;
+            color: black;
+            background-color: transparent;
+        }
+
+        .btn3:hover {
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+        }
+
+        .btn4:active {
+            transform: scale(0.95);
+            box-shadow: 0px 0px 4px black;
+        }
+
+        .btn5:focus {
+            outline: 3px solid black;
+        }
+
+        .btn6:hover {
+            transform: translateY(-3px);
+        }
+
+        .btns {
+            padding: 7px 20px;
+            border: 2px solid crimson;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btns::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: crimson;
+            z-index: -1;
+            transform: scale(0);
+            /* transform: scaleX(0); */
+            /* transform-origin: left; */
+            transform-origin: 0% 0%;
+            border-radius: 0 40px 40px 0;
+            transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+
+        .btns:hover::after {
+            transform: scale(1);
+            border-radius: 0;
+            /* transform: scaleX(1); */
+        }
+
+        .btns a {
+            text-decoration: none;
+            color: crimson;
+            transition: 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+
+        .btns:hover a {
+            transition-delay: 0.2s;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mybtns">
+        <div>
+            <button class="btn btn1">click here</button>
+        </div>
+        <div>
+            <button class="btn btn2">click here</button>
+        </div>
+        <div>
+            <button class="btn btn3">click here</button>
+        </div>
+        <div>
+            <button class="btn btn4">click here</button>
+        </div>
+        <div>
+            <button class="btn btn5">click here</button>
+        </div>
+        <div>
+            <button class="btn btn6">click here</button>
+        </div>
+        <div>
+            <div class="btns">
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

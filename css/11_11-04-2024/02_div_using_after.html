@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            border: 1px solid black;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1::after {
+            content: "";
+            height: 2px;
+            width: 20%;
+            background-color: red;
+            display: block;
+            transition: 1s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .mydiv:hover h1::after {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <h1>About Us</h1>
+    </div>
+</body>
+
+</html>
