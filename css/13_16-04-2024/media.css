@@ -1,0 +1,167 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mar-lr {
+    margin-left : 70px;
+    margin-right: 70px;
+}
+
+.pad-tb {
+    padding-top   : 50px;
+    padding-bottom: 50px;
+}
+
+.about-us {
+    background-color: rgb(213, 255, 241);
+}
+
+.about-us .about-me {
+    display: flex;
+    gap    : 30px;
+}
+
+.about-us .about-me .mywork {
+    flex                 : 1;
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap                  : 30px;
+}
+
+.about-us .about-me .mywork .box {
+    padding         : 40px;
+    background-color: white;
+    text-align      : center;
+    display         : grid;
+    place-content   : center;
+}
+
+.about-us .about-me .mywork .box h1 {
+    font-size     : 35px;
+    padding-bottom: 10px;
+}
+
+.about-us .about-me .about {
+    flex: 1;
+}
+
+.about-us .about-me .about .mini-title {
+    color         : brown;
+    font-size     : 14px;
+    font-weight   : bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.about-us .about-me .about h1 {
+    font-size     : calc(1.5vw + 1.5rem);
+    padding-bottom: 10px;
+}
+
+.about-us .about-me .about p {
+    color         : gray;
+    padding-bottom: 10px;
+    font-size     : 18px;
+    letter-spacing: 1px;
+}
+
+.about-us .about-me .about .biodata {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap                  : 20px;
+    padding-top          : 20px;
+    padding-bottom       : 20px;
+}
+
+.about-us .about-me .about .biodata .left-bio,
+.right-bio {
+    display: grid;
+    gap    : 10px;
+}
+
+.about-us .about-me .about .userdata {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-us .about-me .about .userdata .label {
+    font-weight: 600;
+}
+
+.about-us .about-me .about .userdata .value {
+    font-weight: 600;
+    color      : blue;
+}
+
+.about-us .about-me .about button {
+    padding         : 7px 20px;
+    background-color: blue;
+    color           : white;
+    border          : none;
+}
+
+@media (max-width:576px) {
+    .mar-lr {
+        margin-left : 20px;
+        margin-right: 20px;
+    }
+
+    .about-us .about-me {
+        flex-direction: column;
+    }
+
+    .about-us .about-me .about .biodata {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-us .about-me .mywork {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:576px) {
+    .mar-lr {
+        margin-left : 40px;
+        margin-right: 40px;
+    }
+
+    .about-us .about-me {
+        flex-direction: column;
+    }
+
+    .about-us .about-me .about .biodata {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-us .about-me .mywork {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:992px) {
+    .mar-lr {
+        margin-left : 55px;
+        margin-right: 55px;
+    }
+
+    .about-us .about-me {
+        flex-direction: row;
+    }
+
+    .about-us .about-me .about .biodata {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:1200px) {
+    .mar-lr {
+        margin-left : 70px;
+        margin-right: 70px;
+    }
+
+    .about-us .about-me .about .biodata {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

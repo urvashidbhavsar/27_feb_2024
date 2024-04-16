@@ -1,0 +1,8 @@
+devices                                     breakpoint 
+    
+(1) mobile device                          max-width 576px
+                                           min-width 576px 
+(2) tablet device                          min-width 768px
+(3) mini leptop/pc device                  min-width 992px 
+(4) medium leptop/pc device                min-width 1200px 
+(5) large devices                          min-width 1400px
