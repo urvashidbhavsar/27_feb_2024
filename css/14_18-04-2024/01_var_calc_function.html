@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            /* css variable */
+            --font1: calc(2vw + 1.5rem);
+            --blue: blue;
+            --pink: pink;
+            --pink-1: #fd536f;
+            --font-family-arial: "Arial";
+        }
+
+        .head1 {
+            color: var(--pink);
+            background-color: var(--blue);
+            font-size: var(--font1);
+            font-family: var(--font-family-arial);
+        }
+
+        .head2 {
+            font-size: var(--font1);
+            background-color: var(--pink-1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head1">My heading</h1>
+    <div class="head2">My Heading</div>
+</body>
+
+</html>
