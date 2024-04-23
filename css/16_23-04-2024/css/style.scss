@@ -1,0 +1,461 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mukta", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin       : auto;
+    padding-left : 8px;
+    padding-right: 8px;
+
+    @media (max-width:576px) {
+        width: 100%;
+    }
+
+    @media (min-width:576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width:768px) {
+        max-width: 730px;
+    }
+
+    @media (min-width:992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width:1200px) {
+        max-width: 1140px;
+    }
+
+    @media (min-width:1400px) {
+        max-width: 1340px;
+    }
+}
+
+.ptb-1 {
+    padding-top   : .5em;
+    padding-bottom: .5em;
+}
+
+.ptb-2 {
+    padding-top   : 1em;
+    padding-bottom: 1em;
+}
+
+.ptb-3 {
+    padding-top   : 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.ptb-4 {
+    padding-top   : 2em;
+    padding-bottom: 2em;
+}
+
+.ptb-5 {
+    padding-top   : 2.5em;
+    padding-bottom: 2.5em;
+}
+
+img {
+    max-width     : 100%;
+    height        : auto;
+    vertical-align: middle;
+}
+
+// ==========================================================
+header {
+    // background-color: teal;
+    background-color       : rgba(0, 0, 0, 0.318);
+    position               : fixed;
+    top                    : 0;
+    width                  : 100%;
+    z-index                : 111;
+    box-shadow             : 0 3px 5px black;
+    backdrop-filter        : blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .navbar {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        .logo {
+            a {
+                color: white;
+
+                span {
+                    color: #45b7b7;
+                }
+            }
+        }
+
+        .nav {
+            @media (max-width:576px) {
+                display: none;
+            }
+
+            @media (min-width:576px) {
+                display: none;
+            }
+
+            @media (min-width:992px) {
+                display: block;
+            }
+
+            ul {
+                display    : flex;
+                gap        : 30px;
+                align-items: center;
+
+                li {
+                    padding: 10px;
+
+                    a {
+                        color         : white;
+                        text-transform: uppercase;
+                        font-size     : 14px;
+                        font-weight   : 500;
+                    }
+
+                    .active {
+                        color: #45b7b7;
+                    }
+                }
+            }
+        }
+
+        .menubtn {
+            @media (max-width:576px) {
+                display: block;
+            }
+
+            @media (min-width:576px) {
+                display: block;
+            }
+
+            @media (min-width:992px) {
+                display: none;
+            }
+
+            .mbtn {
+                padding       : 5px;
+                font-size     : 15px;
+                text-transform: uppercase;
+                background    : transparent;
+                border        : none;
+                color         : white;
+                cursor        : pointer;
+            }
+        }
+    }
+}
+
+//===========================================================
+.homepage {
+    .home-banner {
+        display: flex;
+
+        .left-text {
+            flex            : 1;
+            background-color: teal;
+            padding         : 100px 56px;
+            position        : relative;
+
+            @media (max-width:576px) {
+                padding: 100px 10px;
+            }
+
+            .text {
+                position: absolute;
+                z-index : 1;
+
+                p {
+                    color    : #45b7b7;
+                    font-size: 20px;
+                }
+
+                h1 {
+                    font-size: calc(3.5vw + 1.5rem);
+                    text-wrap: nowrap;
+                    color    : white;
+                }
+
+                h3 {
+                    font-size: 22px;
+                    color    : #45b7b7;
+                }
+
+                .linkbtn {
+                    padding-top: 30px;
+
+                    a {
+                        color   : white;
+                        position: relative;
+                        z-index : 1;
+
+                        &:before {
+                            content         : "";
+                            position        : absolute;
+                            left            : 48px;
+                            top             : -7px;
+                            height          : 40px;
+                            width           : 100px;
+                            background-color: #1c8686;
+                            display         : block;
+                            z-index         : -1;
+                        }
+
+                        &:after {
+                            content         : "";
+                            height          : 2px;
+                            width           : 40px;
+                            background-color: white;
+                            display         : inline-block;
+                            margin          : 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .aboutme-img {
+            flex               : 1.5;
+            background         : url(../images/bg_2.jpg.webp);
+            padding            : 270px 0;
+            background-position: center;
+            background-size    : cover;
+            position           : relative;
+
+            .video-play {
+                position        : absolute;
+                left            : -40px;
+                top             : 290px;
+                height          : 80px;
+                width           : 80px;
+                background-color: white;
+                border-radius   : 50%;
+                display         : grid;
+                place-content   : center;
+                color           : teal;
+                animation       : videoplay 1.5s ease infinite;
+                z-index         : 3;
+            }
+        }
+    }
+}
+
+@keyframes videoplay {
+    0% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.702);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+.counstSec {
+    .formgrid {
+        display              : grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap                  : 20px;
+
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width:1200px) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .col:nth-child(1) {
+            @media (min-width:768px) {
+                grid-column: 1/span 2;
+            }
+
+            @media (min-width:1200px) {
+                grid-column: unset;
+            }
+        }
+
+        p {
+            font-size  : 25px;
+            text-align : right;
+            line-height: 30px;
+
+            @media (max-width:576px) {
+                text-align: left;
+            }
+
+            @media (min-width:576px) {
+                text-align: left;
+            }
+
+            @media (min-width:1200px) {
+                text-align: right;
+            }
+        }
+
+        .label {
+            font-size: 15.5px;
+        }
+
+        input[type="text"],
+        select {
+            height : 40px;
+            width  : 100%;
+            padding: 3px 7px;
+            border : 1px solid rgb(185, 185, 185);
+        }
+
+        textarea {
+            height : 43px;
+            width  : 100%;
+            padding: 3px 7px;
+            border : 1px solid rgb(185, 185, 185);
+        }
+
+        input[type="text"]:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: none;
+        }
+
+        button {
+            padding         : 16px 30px;
+            background-color: teal;
+            color           : white;
+            border          : none;
+
+        }
+    }
+}
+
+.caseStudy {
+    .sec-title {
+        text-align: center;
+
+        .title {
+            font-size     : 15px;
+            color         : gray;
+            text-transform: uppercase;
+            font-weight   : bold;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size     : calc(2.5vw + 20px);
+            text-transform: capitalize;
+        }
+
+        .info {
+            width : 500px;
+            margin: auto;
+
+            @media (max-width:576px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .cardDesign {
+        display              : grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap                  : 30px;
+        padding-top          : 50px;
+
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width:992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card {
+            box-shadow: 0 2px 6px rgb(202, 202, 202);
+            transition: 0.5s ease-in;
+
+
+            // &:hover {
+            //     transform: translateY(-5px);
+            // }
+
+            .card-img {
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    transition: 0.5s ease-in-out;
+                }
+
+                .overlay {
+                    position        : absolute;
+                    background-color: black;
+                    bottom          : 0;
+                    left            : 0;
+                    color           : white;
+                    padding         : 10px;
+                    transform       : scale(0);
+                    transition      : 0.5s ease;
+                    transform-origin: 0 100%;
+                }
+            }
+
+            &:hover .overlay {
+                transform: scale(1);
+            }
+
+            &:hover img {
+                scale: 1.1;
+            }
+
+            .card-text {
+                padding: 20px;
+
+                h3 {
+
+                    a {
+                        color     : black;
+                        transition: 0.3s ease;
+
+                        &:hover {
+                            color: teal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
