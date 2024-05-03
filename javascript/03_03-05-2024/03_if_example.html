@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- print number min or not -->
+    <script>
+        var a = 4, b = 4, c = 4;
+        if (a < b && a < c) {
+            document.write(`${a} is min`)
+        } else if (b < a && b < c) {
+            document.write(`${b} is min`)
+        } else if (c < a && c < b) {
+            document.write(`${c} is min`)
+        } else if (a == b && b == c && c == a) {
+            document.write(`${a}, ${b} and ${c} are same`)
+        } else {
+            document.write("number not defined")
+        }
+    </script>
+</body>
+
+</html>
