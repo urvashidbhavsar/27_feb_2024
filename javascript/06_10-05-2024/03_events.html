@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main,
+        .sub,
+        h1 {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    onmousedown =: pointing button pressed
+    onmouseenter =: when mouse pointer enter on element
+    onmouseleave =: when mouse pointer moved out from element
+    onmousemove =: when mouse move on element.
+    onmouseout =: when pointer moved out from parent element as well as child also.
+    onmouseover =: when pointer enter on parent element as well as child also
+    onmouseup =: when user release a pointer after click.
+    onmousewheel =: when user scrolling through mouse wheel
+    oncontextmenu=: when user press right click on mouse.
+    -->
+
+    <div class="main"> main
+        <div class="sub"> sub
+            <h1>Hello</h1>
+        </div>
+    </div>
+
+
+    <!-- 
+        onkeydown =: when user press down any key on keyboard
+        onkeypress =: when user press down key from alphabets, number and special character.
+        onkeyup =: when user release the key.
+     -->
+    <input type="text" name="" id="" onkeyup="msg()">
+    <script>
+        function msg() {
+            alert("event applied")
+        }
+    </script>
+</body>
+
+</html>

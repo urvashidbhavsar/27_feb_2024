@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            font-size: 50px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeClass()">click here</button>
+
+    <h1 class="head" id="head">Hello world</h1>
+
+    <script>
+        function changeClass() {
+            let h1 = document.getElementById("head");
+            if (h1.className == "head") {
+                h1.className = "title"
+            } else {
+                h1.className = "head"
+            }
+        }
+    </script>
+</body>
+
+</html>

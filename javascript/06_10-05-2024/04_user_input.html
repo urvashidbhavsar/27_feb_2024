@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        Enter your number :
+        <input type="text" name="" id="userno" onchange="return userinput()">
+        <!-- onkeyup="return userinput()" -->
+
+        <!-- <button onclick="return userinput()">Display</button> -->
+    </form>
+
+    <p>Your number is : <span id="msg"></span></p>
+
+    <script>
+        function userinput() {
+            let user = document.getElementById("userno").value
+            if (user == "") {
+                alert("Enter value")
+            } else {
+                document.getElementById("msg").innerHTML = user
+            }
+            
+            return false
+        }
+    </script>
+</body>
+
+</html>

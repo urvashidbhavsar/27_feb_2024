@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .main {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        var b = document.querySelectorAll(".box"); // also select tag
+        for (let i = 0; i < b.length; i++) {
+            b[i].style.backgroundColor = "red"
+        }
+    </script>
+
+    <hr>
+    <!-- descendent selector -->
+    <div class="parent">
+        <div class="child">Hello world</div>
+    </div>
+
+    <script>
+        let sel = document.querySelectorAll(".parent .child");
+        for (let i = 0; i < sel.length; i++) {
+            sel[i].style.fontSize = "40px"
+        }
+    </script>
+
+    <!-- group selection -->
+    <h1>hello</h1>
+    <h2>hello</h2>
+    <h3>hello</h3>
+    <script>
+        let grp = document.querySelectorAll("h1,h2,h3")
+        for (let i = 0; i < grp.length; i++) {
+            grp[i].style.color = "blue"
+        }
+    </script>
+</body>
+
+</html>
