@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <label for="">Enter Cities : </label>
+            <input type="text" name="" id="cityname">
+        </div>
+
+        <div>
+            <button onclick="return addList()">Add in List</button>
+        </div>
+
+        <div>
+            select city :
+            <select name="" id="list">
+                <option value="">---select---</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        function addList() {
+            debugger
+            // create variable for input
+            var inp = document.getElementById("cityname").value;
+            // create element for option
+            var op = document.createElement("option");
+            // add value from input
+            var inp_text = document.createTextNode(inp);
+            var list = document.getElementById("list");
+            // text added in option
+            op.text = inp; // op.appendChild(inp_text);
+            // option add in select
+            // document.getElementById("list").append(op);
+            list.add(op);
+            document.getElementById("cityname").value = ""
+
+            return false
+        }
+    </script>
+</body>
+
+</html>

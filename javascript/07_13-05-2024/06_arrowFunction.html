@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <button onclick="showmsg()">click me</button>
+    <button onclick="alert(sum(10,10))">total</button>
+    <button onclick="document.write(sum(10,10))">sum</button>
+
+    <script>
+        var b = document.getElementById("btn");
+        b.addEventListener("click", () => {
+            alert("click on button 1")
+        })
+
+        var showmsg = () => {
+            alert("click on button")
+        }
+
+        var sum = (a, b) => {
+            return a + b
+        }
+    </script>
+</body>
+
+</html>
