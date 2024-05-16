@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .count {
+            height: 150px;
+            width: 150px;
+            background: cadetblue;
+            color: white;
+            font-size: 50px;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="count" id="counts"></div>
+
+    <script>
+        var mydiv = document.getElementById("counts")
+        var start = 0;
+        var set_count = setInterval(() => {
+            mydiv.innerHTML = ++start;
+            if (start == 500) {
+                clearInterval(set_count)
+            }
+        }, 50);
+    </script>
+</body>
+
+</html>
