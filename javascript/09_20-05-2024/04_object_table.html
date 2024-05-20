@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tbody id="title">
+            <tr>
+                <th>No</th>
+                <th>Brands</th>
+                <th>Color</th>
+                <th>Prize</th>
+                <th>Image</th>
+                <th>Type</th>
+            </tr>
+        </tbody>
+        <tbody id="data"></tbody>
+    </table>
+    <script>
+        var chair = [
+            {
+                id: 1,
+                brands: "Cello",
+                color: "Black",
+                prize: 500,
+                image: "https://5.imimg.com/data5/UP/PJ/LN/SELLER-64068811/cello-plastic-chair.jpg",
+                material: "plastic",
+                type: "adult"
+            },
+            {
+                id: 2,
+                brands: "Nil Kamal",
+                color: "Brown",
+                prize: 1000,
+                image: "https://www.nilkamalfurniture.com/cdn/shop/files/CHREEEZYGOSRB.jpg?v=1685596652&width=1080",
+                material: "plastic",
+                type: "adult"
+            },
+        ]
+
+        var table = document.getElementById("data");
+        for (let i = 0; i < chair.length; i++) {
+            console.log(chair);
+            table.innerHTML += ` <tr>
+                <td>${chair[i].id}</td>
+                <td>${chair[i].brands}</td>
+                <td>${chair[i].color}</td>
+                <td>${chair[i].prize}</td>
+                <td><img src='${chair[i].image}'></td>
+                <td>${chair[i].type}</td>
+           </tr> `
+        }
+
+    </script>
+</body>
+
+</html>

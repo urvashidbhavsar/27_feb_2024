@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var chair = {
+            brands: "Cello",
+            color: "black",
+            prize: 500,
+            image: "https://5.imimg.com/data5/UP/PJ/LN/SELLER-64068811/cello-plastic-chair.jpg",
+            material: "plastic",
+            type: "adult"
+        }
+        console.log(chair);
+        document.write(chair, "<br>");
+
+        // single print
+        document.write(chair.brands, "<br><br>")
+
+        // using loop
+        let ch;
+        for (ch in chair) {
+            document.write(`<div>${chair[ch]}<div>`)
+        }
+    </script>
+</body>
+
+</html>

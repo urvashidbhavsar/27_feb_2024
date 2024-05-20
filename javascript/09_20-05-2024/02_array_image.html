@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            padding: 50px;
+            background-color: lightcyan;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+
+    <script>
+        var img = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+            "https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg",
+            "https://buffer.com/library/content/images/2023/10/free-images.jpg"];
+
+        var m = document.querySelector(".main");
+        for (let i = 0; i < img.length; i++) {
+            console.log(img[i]);
+            m.innerHTML += `<div class='image'>
+                <img src='${img[i]}' alt=''>
+                </div>`
+        }
+    </script>
+</body>
+
+</html>
