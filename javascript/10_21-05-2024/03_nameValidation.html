@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserForm {
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 130px auto;
+        }
+
+        .label {
+            font-size: 22px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        input[type="text"] {
+            height: 25px;
+            width: 90%;
+            padding: 0 5px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: 1px solid gray;
+        }
+
+        input[type="text"]:focus-visible {
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #msg {
+            color: red;
+            font-size: 14px;
+        }
+
+        .error {
+            border: 1px solid red !important
+        }
+    </style>
+</head>
+
+<body>
+    <div class="UserForm">
+        <form action="#">
+            <div class="row">
+                <div class="label">Enter Name : </div>
+                <div>
+                    <input type="text" name="" id="uname" onblur="return checkName()" onkeyup="return checkNamePtn()"
+                        placeholder="Full Name">
+                    <div>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label"></div>
+                <div>
+                    <button onclick="return checkName()">Click</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // button
+        function checkName() {
+            let uname = document.getElementById("uname");
+            if (uname.value == "" || uname.value == null) {
+                document.getElementById("msg").innerHTML = "Enter name"
+                uname.classList.add("error")
+                uname.focus()
+            }
+            return false;
+        }
+        // pattern
+        function checkNamePtn() {
+            let uname = document.getElementById("uname");
+            let ptn = /^[a-zA-Z\s]*$/;
+            if (!ptn.test(uname.value)) {
+                document.getElementById("msg").innerHTML = "Invalid Name !!!"
+                uname.classList.add("error")
+            } else if (uname.value.length < 5) {
+                document.getElementById("msg").innerHTML = "Enter minimum 5 characters"
+                uname.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = null
+                uname.classList.remove("error")
+            }
+            return false
+        }
+
+        let inp = document.querySelectorAll("input");
+        inp.forEach(element => {
+            element.addEventListener("input", () => {
+                element.value = element.value.toUpperCase()
+            })
+        });
+    </script>
+</body>
+
+</html>
