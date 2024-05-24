@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav {
+            background-color: rgb(6, 6, 148);
+        }
+
+        .nav .menulist {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav .menulist li {
+            padding: 10px;
+        }
+
+        .nav .menulist li a {
+            color: white;
+        }
+
+        i {
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown .dropmenu {
+            display: none;
+            position: absolute;
+            width: 150px;
+            background-color: white;
+            padding: 7px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+        }
+
+        .dropdown .dropmenu li {
+            padding: 5px;
+        }
+
+        .dropdown .dropmenu a {
+            color: black !important;
+        }
+
+        .show {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="menulist">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li class="dropdown">
+                <a href="#">Service</a>
+                <i class="bi bi-caret-down"></i>
+                <ul class="dropmenu">
+                    <li><a href="">Service 1</a></li>
+                    <li><a href="">Service 2</a></li>
+                </ul>
+            </li>
+            <!-- homework => show dynamic multiple dropdown at on click, remember do use id -->
+            <li class="dropdown">
+                <a href="#">Accounts</a>
+                <i class="bi bi-caret-down"></i>
+                <ul class="dropmenu">
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Register</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let dropdown = document.querySelector(".dropdown");
+        let dropmenu = document.querySelector(".dropmenu");
+        dropdown.addEventListener("click", () => {
+            dropmenu.classList.toggle("show")
+        })
+    </script>
+</body>
+
+</html>

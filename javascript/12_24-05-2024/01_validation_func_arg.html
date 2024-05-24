@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserForm {
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 130px auto;
+        }
+
+        .label {
+            font-size: 22px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            height: 25px;
+            width: 90%;
+            padding: 0 5px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: 1px solid gray;
+        }
+
+        input[type="text"]:focus-visible,
+        [type="password"]:focus-visible {
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .msg {
+            color: red;
+            font-size: 14px;
+        }
+
+        .error {
+            border: 1px solid red !important
+        }
+    </style>
+</head>
+
+<body>
+    <div class="UserForm">
+        <form action="#">
+            <div class="row">
+                <div class="label">Firstname : </div>
+                <div>
+                    <input type="text" name="" id="fname" onblur="return checkname('fname', 'msg1')"
+                        onkeyup="return checkNamePtn('fname', 'msg1')">
+                    <div>
+                        <span id="msg1" class="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Middlename : </div>
+                <div>
+                    <input type="text" name="" id="mname" onblur="return checkname('mname', 'msg2')"
+                        onkeyup="return checkNamePtn('mname', 'msg2')">
+                    <div>
+                        <span id="msg2" class="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Lastname : </div>
+                <div>
+                    <input type="text" name="" id="lname" onblur="return checkname('lname', 'msg3')"
+                        onkeyup="return checkNamePtn('lname', 'msg3')">
+                    <div>
+                        <span id="msg3" class="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkname(blank, msg_id) {
+            let input = document.getElementById(blank)
+            if (input.value == "") {
+                document.getElementById(msg_id).innerHTML = "Enter value!!!"
+                input.classList.add("error")
+            }
+            return false
+        }
+
+        function checkNamePtn(inputex, msg_id) {
+            let input = document.getElementById(inputex)
+            let ptn = /^[a-zA-Z]*$/
+            if (!ptn.test(input.value)) {
+                document.getElementById(msg_id).innerHTML = "Invalid name !!!"
+                input.classList.add("error")
+            } else {
+                document.getElementById(msg_id).innerHTML = null
+                input.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

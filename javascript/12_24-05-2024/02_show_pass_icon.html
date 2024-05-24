@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .UserForm {
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 130px auto;
+        }
+
+        .label {
+            font-size: 18px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            height: 25px;
+            width: 100%;
+            padding: 0 5px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: 1px solid gray;
+            border-right: none;
+        }
+
+        input[type="text"]:focus-visible,
+        [type="password"]:focus-visible {
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .msg {
+            color: red;
+            font-size: 14px;
+        }
+
+        .error {
+            border: 1px solid red !important
+        }
+
+        .field {
+            display: flex;
+        }
+
+        .input {
+            width: 100%;
+        }
+
+        .icon {
+            height: 25px;
+            width: 25px;
+            border: 1px solid gray;
+            display: grid;
+            place-content: center;
+            border-left: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="UserForm">
+        <form action="#">
+            <div class="row">
+                <div class="label">Enter password : </div>
+                <div class="field">
+                    <div class="input">
+                        <input type="password" name="" id="pass">
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-eye" id="i1" onclick="showPass('pass','i1')"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Re-Enter password : </div>
+                <div class="field">
+                    <div class="input">
+                        <input type="password" name="" id="cpass">
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-eye" id="i2" onclick="showPass('cpass','i2')"></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showPass(pass_id, icon_id) {
+            let pas = document.getElementById(pass_id);
+            let icon = document.getElementById(icon_id)
+            if (pas.type == "password" && icon.classList.contains("bi-eye")) {
+                pas.type = "text"
+                icon.classList.remove("bi-eye");
+                icon.classList.add("bi-eye-slash")
+            } else {
+                pas.type = "password"
+                icon.classList.remove("bi-eye-slash")
+                icon.classList.add("bi-eye");
+            }
+        }
+    </script>
+</body>
+
+</html>
