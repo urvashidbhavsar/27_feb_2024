@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserForm {
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 130px auto;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            height: 25px;
+            width: 90%;
+            padding: 0 5px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: 1px solid gray;
+        }
+
+        input[type="text"]:focus-visible,
+        [type="password"]:focus-visible {
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .msg {
+            color: red;
+            font-size: 14px;
+        }
+
+        .error {
+            border: 1px solid red !important
+        }
+    </style>
+</head>
+
+<body>
+    <div class="UserForm">
+        <form action="#">
+            <div class="row">
+                <div class="label">Gender : </div>
+                <div>
+                    <input type="radio" name="gen" id="male">
+                    <label for="">Male</label>
+                    <input type="radio" name="gen" id="female">
+                    <label for="">Female</label>
+                    <div>
+                        <span id="msg1" class="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Languages : </div>
+                <div>
+                    <input type="checkbox" name="" id="c1">
+                    <label for="">Java</label>
+                    <input type="checkbox" name="" id="c2">
+                    <label for="">JavaScript</label>
+                    <input type="checkbox" name="" id="c3">
+                    <label for="">C lang</label>
+                    <div>
+                        <span id="msg2" class="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    City :
+                </div>
+                <div>
+                    <select name="" id="list">
+                        <option value="-1">---select---</option>
+                        <option value="">Surat</option>
+                    </select>
+                    <div class="msg" id="msg3"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label"></div>
+                <div>
+                    <button onclick="return checkValidate()">Click</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkValidate() {
+            var m = document.getElementById("male");
+            var f = document.getElementById("female");
+            if (m.checked == false && f.checked == false) {
+                document.getElementById("msg1").innerHTML = "Select Value!!!"
+            } else {
+                document.getElementById("msg1").innerHTML = null
+            }
+
+            var c1 = document.getElementById("c1").checked;
+            var c2 = document.getElementById("c2").checked;
+            var c3 = document.getElementById("c3").checked;
+            if (c1 == false && c2 == false && c3 == false) {
+                document.getElementById("msg2").innerHTML = "Select Value!!!"
+            } else {
+                document.getElementById("msg2").innerHTML = null
+            }
+
+            var clist = document.getElementById("list");
+            if (clist.value == "-1") {
+                document.getElementById("msg3").innerHTML = "Select City!!"
+            } else {
+                document.getElementById("msg3").innerHTML = null
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
