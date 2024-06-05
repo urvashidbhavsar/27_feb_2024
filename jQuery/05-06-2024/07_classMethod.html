@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mypara {
+            font-size: 30px;
+            font-family: fantasy;
+            color: white;
+            background-color: olivedrab;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <button id="btn1">add class</button>
+    <button id="btn2">remove class</button>
+    <button id="btn3">toggle class</button>
+    <button id="btn4">has class</button>
+
+    <p id="p1">this is my first paragraph</p>
+    <p id="p2">this is my second paragraph</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#p1").addClass("mypara")
+            })
+            $("#btn2").click(function () {
+                $("#p1").removeClass("mypara")
+            })
+            $("#btn3").click(function () {
+                $("#p2").toggleClass("mypara")
+            })
+            $("#btn4").click(function () {
+                if ($("#p2").hasClass("mypara")) {
+                    alert("class exist")
+                } else {
+                    alert("not exist")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <div class="div1"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(".div1").animate({
+                height: "200px",
+                width: "200px",
+                marginTop: "100px",
+                marginLeft: "100px",
+                rotate: "360deg"
+            }, 2000)
+        })
+    </script>
+</body>
+
+</html>

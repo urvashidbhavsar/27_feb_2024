@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <button id="btn">click here</button>
+    <div></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("div").fadeOut(2000, function () {
+                    $("div").slideDown(function () {
+                        $("div").slideUp()
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
