@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myimg {
+            width: 400px;
+            border: 5px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <button id="btn1">set attr</button>
+    <button id="btn2">remove attr</button>
+    <button id="btn3">get attr</button>
+
+    <hr>
+    <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="">
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("img").attr("class", "myimg")
+            })
+            $("#btn2").click(function () {
+                $("img").removeAttr("class").attr()
+            })
+            $("#btn3").click(function () {
+                alert($("img").attr("class"))
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -29,8 +29,8 @@ addClass(), removeClass(), toggleClass()
 // to get a class 
 hasClass()
 
-// effective with structure / DOM manipulation 
-// set and get attribute
+// effective with structure / DOM manipulation
+// set and get attribute method
 text(), html(), val()
 
 // add element 

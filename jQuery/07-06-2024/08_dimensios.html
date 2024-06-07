@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2 {
+            height: 250px;
+            width: 350px;
+            padding: 20px;
+            border: 2px solid black;
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <div class="div1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eum, soluta vero consectetur est, esse
+        distinctio eveniet voluptatibus explicabo deleniti molestiae doloremque mollitia ab voluptates porro dolor
+        maiores. Odio, culpa!
+    </div>
+
+    <div class="div2"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(".div1").height("auto").width("300px").css({
+                border: "2px solid red",
+                padding: "14px"
+            })
+
+            $txt = "";
+            $txt = `Height : ${$(".div2").height()} <br>
+                Width : ${$(".div2").width()} <br>
+                innerHeight : ${$(".div2").innerHeight()} <br>
+                innerWidth : ${$(".div2").innerWidth()} <br>
+                 outerHeight : ${$(".div2").outerHeight()} <br>
+                outerWidth : ${$(".div2").outerWidth()} <br>
+                 outerHeight : ${$(".div2").outerHeight(true)} <br>
+                outerWidth : ${$(".div2").outerWidth(true)} <br>
+            `
+
+            $(".div2").html($txt)
+        })
+    </script>
+</body>
+
+</html>
