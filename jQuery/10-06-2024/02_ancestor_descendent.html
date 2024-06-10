@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        ul,
+        li {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .set {
+            border: 1px solid red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <button id="btn">click</button>
+    <hr>
+
+    <div class="main">Main
+        <div class="sub"> Sub
+            <div class="inner">Inner
+                <ul> ul
+                    <li>List 1</li>
+                    <div class="list">List 2</div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                // $("li").parent("ul").addClass("set") = single parent
+                // $("li").parents(".main").addClass("set") = from multiple parent
+                // $("li").parentsUntil(".main").addClass("set") = when ever parents are show 
+
+                // $(".main").children(".sub").addClass("set") => single one step child 
+                // select any child from parent
+                $(".main").find(".inner").addClass("set")
+            })
+        })
+    </script>
+</body>
+
+</html>

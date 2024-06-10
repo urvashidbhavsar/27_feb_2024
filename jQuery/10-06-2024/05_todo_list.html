@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .icon:hover {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <div>
+        <input type="text" name="" id="userval">
+        <button id="add">Add</button>
+    </div>
+    <ul></ul>
+
+    <script>
+        $(document).ready(function () {
+            $("#add").click(function () {
+                $inp = $("#userval").val();
+                if ($inp == "") {
+                    alert("enter value")
+                } else {
+                    $("ul").append(`
+                        <li>${$inp} 
+                            <a href='#' class='icon'>&Cross;</a>
+                        </li>
+                    `)
+                    $("#userval").val('');
+                }
+
+                $(".icon").on("click", function () {
+                    $(this).parent().remove()
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

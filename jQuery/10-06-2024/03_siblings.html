@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main div {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+
+        .set {
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <button id="btn">click</button>
+    <hr>
+
+    <div class="main">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                // $(".box1").siblings(".box3").addClass("set")
+                // $(".box1").next().addClass("set")
+                // $(".box1").nextAll().addClass("set")
+                // $(".box1").nextUntil(".box5").addClass("set")
+                // $(".box5").prev().addClass("set")
+                // $(".box5").prevAll().addClass("set")
+                $(".box5").prevUntil(".box1").addClass("set")
+            })
+        })
+    </script>
+</body>
+
+</html>
