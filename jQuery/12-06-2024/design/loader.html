@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(225, 224, 224);
+        }
+
+        .outerdiv {
+            height: 200px;
+            width: 200px;
+            margin: 200px auto;
+            position: relative;
+        }
+
+        .allcircle {
+            position: relative;
+        }
+
+        .circle {
+            border: 3px solid white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .circle1 {
+            height: 200px;
+            width: 200px;
+            left: -3px;
+            top: -3px;
+            animation: circle1 7s linear infinite;
+        }
+
+        .circle2 {
+            height: 157px;
+            width: 157px;
+            top: 18px;
+            left: 18px;
+            animation: circle1 5s linear infinite;
+        }
+
+        .circle3 {
+            height: 100px;
+            width: 100px;
+            left: 47px;
+            top: 47px;
+            animation: circle1 3s linear infinite;
+        }
+
+        .circle .dot {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: teal;
+            border-radius: 50%;
+        }
+
+        .circle1 .dot1 {
+            top: 45px;
+        }
+
+        .circle2 .dot2 {
+            top: 52px;
+            left: -9px;
+        }
+
+        .circle3 .dot3 {
+            top: 7px;
+        }
+
+        .middle {
+            height: 50px;
+            width: 50px;
+            background-color: cornsilk;
+            border-radius: 50%;
+            position: absolute;
+            top: 76px;
+            left: 76px;
+        }
+
+        @keyframes circle1 {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerdiv">
+        <div class="middle"></div>
+        <div class="allcircle">
+            <div class="circle circle1">
+                <div class="dot dot1"></div>
+            </div>
+            <div class="circle circle2">
+                <div class="dot dot2"></div>
+            </div>
+            <div class="circle circle3">
+                <div class="dot dot3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

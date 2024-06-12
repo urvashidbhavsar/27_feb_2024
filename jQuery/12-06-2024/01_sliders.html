@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .bx-wrapper {
+            border: none !important;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 30px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: red;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: white;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover {
+            background: gray;
+        }
+
+        .slider1 {
+            background: url(https://i.pinimg.com/originals/79/7d/d3/797dd3a35e422e9e01666cf762eaafc9.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider2 {
+            background: url(https://wallpaper.forfun.com/fetch/e4/e4b38e30f96fe5610c943a172cf4724c.jpeg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider3 {
+            background: url(https://wallpapers-clan.com/wp-content/uploads/2024/03/pink-flowers-sky-aesthetic-preppy-desktop-wallpaper-preview.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider4 {
+            background: url(https://wallpapers.com/images/featured/flower-desktop-background-d2vozlhwq5flw8an.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider {
+            padding: 200px 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.672);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 50px;
+            padding-bottom: 10px;
+        }
+
+        .flexvalues {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../jquery.js"></script>
+
+    <div class="home-slider">
+        <div class="slider slider1">
+            <div class="flexvalues">
+                <div></div>
+                <div>
+                    <h1 class="">My title</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aperiam, eius quod eaque aliquam
+                        officia iure sequi repudiandae. Quis aliquam earum sed! Delectus, magni laborum doloribus nobis
+                        totam explicabo quisquam?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider slider2">
+            <div class="flexvalues">
+                <div></div>
+                <div>
+                    <h1 class="">My title</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aperiam, eius quod eaque aliquam
+                        officia iure sequi repudiandae. Quis aliquam earum sed! Delectus, magni laborum doloribus nobis
+                        totam explicabo quisquam?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider slider3">
+            <div class="flexvalues">
+                <div></div>
+                <div>
+                    <h1 class="">My title</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aperiam, eius quod eaque aliquam
+                        officia iure sequi repudiandae. Quis aliquam earum sed! Delectus, magni laborum doloribus nobis
+                        totam explicabo quisquam?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider slider4">
+            <div class="flexvalues">
+                <div>
+                    <h1 class="">My title</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aperiam, eius quod eaque aliquam
+                        officia iure sequi repudiandae. Quis aliquam earum sed! Delectus, magni laborum doloribus nobis
+                        totam explicabo quisquam?
+                    </p>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.js"></script>
+
+    <script>
+        $(function () {
+            $('.home-slider').bxSlider({
+                mode: 'fade',
+                // captions: true,
+                // slideWidth: 600
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+bxslider
+
+owl-carousel 
+
+swiper js 
+
+slick 
+
+flexslider
+
+bootstrap carousel 
