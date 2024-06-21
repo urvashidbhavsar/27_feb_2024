@@ -1,0 +1,20 @@
+bootstrap4                      bootstrap5
+1. 5 responsive tiers           6 responsive tiers.
+2. all plugin are in            jquery removed and plugin in 
+    jquery.                         javascript.
+
+css                         breakpoint
+max-width:576px                 - 
+min-width:576px                 sm 
+min-width:768px                 md 
+min-width:992px                 lg 
+min-width:1200px                xl 
+min-width:1400px                xxl 
+
+for layout 2 classes are available :
+(1) container 
+(2) container-fluid 
+
+for grid system used :
+grid system provided 12 col system.
+row, col class 
