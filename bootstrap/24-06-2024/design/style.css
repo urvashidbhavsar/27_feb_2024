@@ -1,0 +1,10 @@
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* 
+#home-slider img {
+    height       : 350px;
+    object-fit   : cover;
+    border-radius: 10px;
+} */
