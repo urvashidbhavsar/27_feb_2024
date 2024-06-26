@@ -1,0 +1,50 @@
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* 
+#home-slider img {
+    height       : 350px;
+    object-fit   : cover;
+    border-radius: 10px;
+} */
+.solSec .icon {
+    height    : 100px;
+    width     : 100px;
+    text-align: center;
+}
+
+@media (max-width:576px) {
+    .title {
+        width: 100% !important;
+    }
+}
+
+@media (min-width:576px) {
+    .title {
+        width: 100% !important;
+    }
+}
+
+@media (min-width:768px) {
+    .title {
+        width: 50% !important;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgb(6, 6, 89);
+    color           : white;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-body {
+    background-color: lightblue;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-color: white;
+}
