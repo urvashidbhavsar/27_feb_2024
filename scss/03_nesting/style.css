@@ -1,0 +1,14 @@
+.image-scale {
+  width: 300px;
+  border: 2px solid black;
+  margin: auto;
+  overflow: hidden;
+}
+.image-scale img {
+  width: 300px;
+  vertical-align: middle;
+  transition: 1s ease;
+}
+.image-scale:hover img {
+  scale: 1.2;
+}/*# sourceMappingURL=style.css.map */

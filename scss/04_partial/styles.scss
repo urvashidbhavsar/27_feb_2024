@@ -1,0 +1,8 @@
+@use 'forvar';
+
+.mydiv {
+    width  : forvar.$width;
+    height : auto;
+    border : 2px solid forvar.$black;
+    padding: forvar.$p-3;
+}

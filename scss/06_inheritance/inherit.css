@@ -1,0 +1,25 @@
+.main div {
+  width: 300px;
+  height: auto;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  gap: 30px;
+}
+.main .div1 {
+  background-color: #076ec8;
+  box-shadow: 0 0 5px rgba(7, 110, 200, 0.5);
+  color: white;
+}
+.main .div2 {
+  background-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  color: white;
+}
+.main .div3 {
+  background-color: crimson;
+  box-shadow: 0 0 5px rgba(220, 20, 60, 0.5);
+  color: white;
+}/*# sourceMappingURL=inherit.css.map */

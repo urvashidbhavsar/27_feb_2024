@@ -1,0 +1,33 @@
+@mixin setColor($clr: #076ec8) {
+    background-color: $clr;
+    box-shadow      : 0 0 5px rgb($clr, 0.5);
+    color           : white;
+}
+
+// create class for inherit
+%setdiv {
+    width  : 300px;
+    height : auto;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    gap    : 30px;
+
+    div {
+        @extend %setdiv;
+    }
+
+    .div1 {
+        @include setColor;
+    }
+
+    .div2 {
+        @include setColor(red)
+    }
+
+    .div3 {
+        @include setColor(crimson)
+    }
+}

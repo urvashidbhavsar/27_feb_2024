@@ -1,0 +1,16 @@
+$teal   : #008080;
+$white  : #ffffff;
+$black  : #000000;
+$h-auto : auto;
+$w-3    : 300px;
+$p-2    :20px;
+$p-4    :40px;
+
+div {
+    height          : $h-auto;
+    width           : $w-3;
+    border          : 2px solid $black;
+    background-color: $teal;
+    color           : $white;
+    padding         : $p-2;
+}

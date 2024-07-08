@@ -1,0 +1,19 @@
+$w-3   :300px;
+$black : black;
+
+.image-scale {
+    width   : $w-3;
+    border  : 2px solid $black;
+    margin  : auto;
+    overflow: hidden;
+
+    img {
+        width         : $w-3;
+        vertical-align: middle;
+        transition    : 1s ease;
+    }
+
+    &:hover img {
+        scale: 1.2;
+    }
+}
