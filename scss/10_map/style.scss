@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$light:("Extralight":100,
+    "light":200,
+);
+$bold:("bold":700,
+    "Extrabold":800,
+);
+
+@mixin setBold {
+    font-weight: map.get($light, "Extralight")
+}
+
+.p1 {
+    @include setBold;
+    font-size: 40px;
+}
+
+.p2 {
+    font-weight: map.get($bold, "bold");
+    font-size  : 40px;
+}

@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    gap    : 30px;
+    padding: 50px;
+}
+
+$size : 50px,
+100px,
+150px;
+
+@each $s in $size {
+    .box-#{$s} {
+        height          : $s;
+        width           : $s;
+        background-color: teal;
+    }
+}

@@ -1,0 +1,17 @@
+.main {
+    padding: 40px;
+    display: flex;
+    gap    : 30px;
+}
+
+%block {
+    height: 100px;
+    width : 100px;
+}
+
+@for $i from 1 through 3 {
+    .box:nth-child(#{$i}) {
+        @extend %block;
+        background-color: lighten(#0b71a8, $i * 7);
+    }
+}

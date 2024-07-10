@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: crimson;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: blue;
+}/*# sourceMappingURL=styles.css.map */

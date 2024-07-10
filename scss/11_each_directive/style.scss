@@ -1,0 +1,12 @@
+$icon : ("image":"\f03e",
+    "tiktok":"\e07b",
+    "face-smile":"\f118",
+);
+
+@each $name,
+$glyph in $icon {
+    .icon-#{$name}:before {
+        content    : $glyph;
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    }
+}

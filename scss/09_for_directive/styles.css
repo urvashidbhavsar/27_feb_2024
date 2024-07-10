@@ -1,0 +1,22 @@
+.main {
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.box:nth-child(3), .box:nth-child(2), .box:nth-child(1) {
+  height: 100px;
+  width: 100px;
+}
+
+.box:nth-child(1) {
+  background-color: #0d88ca;
+}
+
+.box:nth-child(2) {
+  background-color: #0f9eeb;
+}
+
+.box:nth-child(3) {
+  background-color: #2dacf1;
+}/*# sourceMappingURL=styles.css.map */

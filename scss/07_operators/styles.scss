@@ -1,0 +1,11 @@
+@use "sass:math";
+
+%border {
+    border : 2px solid black;
+    padding: 20px;
+}
+
+div {
+    @extend %border;
+    width: math.div(100px, 200px) * 100%;
+}

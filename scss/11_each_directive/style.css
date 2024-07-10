@@ -1,0 +1,14 @@
+.icon-image:before {
+  content: "\f03e";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+}
+
+.icon-tiktok:before {
+  content: "\e07b";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+}
+
+.icon-face-smile:before {
+  content: "\f118";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+@use "sass:math";
+
+* {
+    margin: 0;
+}
+
+@mixin setdiv($size, $radius) {
+    height: $size;
+    width : $size;
+
+    @if $radius {
+        border-radius: math.div($size, 2);
+    }
+
+    @else {
+        border-radius: math.div($size, 4);
+    }
+}
+
+.square {
+    @include setdiv(100px, $radius :false);
+    background-color               : crimson;
+}
+
+.circle {
+    @include setdiv(200px, $radius:true);
+    background-color              : blue;
+}

@@ -1,0 +1,12 @@
+@use "sass:string";
+
+$font-family :string.quote(verdana);
+$font-bold   : string.unquote("bold");
+
+.p1 {
+    font-family: $font-family;
+}
+
+.p2 {
+    font-weight: $font-bold;
+}
