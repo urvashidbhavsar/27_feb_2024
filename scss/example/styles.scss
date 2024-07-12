@@ -1,0 +1,82 @@
+@use "varMix";
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin   : auto;
+}
+
+.homepage {
+    background     : url(https://www.goodwall.io/blog/wp-content/uploads/2023/05/best-coding-websites.jpg) no-repeat center;
+    background-size: cover;
+    position       : relative;
+    z-index        : 1;
+
+    &:after {
+        content : "";
+        position: absolute;
+        @extend %positions;
+        background-color: rgba(varMix.$deepteal, 0.8);
+        z-index         : -1;
+    }
+
+    .home-data {
+        display    : flex;
+        gap        : 30px;
+        align-items: center;
+
+        .home-info {
+            h5 {
+                font-size     : varMix.$font-4;
+                padding-bottom: varMix.$p-1;
+                color         : varMix.$white;
+            }
+
+            h1 {
+                font-size          : varMix.$font-1;
+                padding-bottom     : varMix.$p-1;
+                color              : transparent;
+                -webkit-text-stroke: 1px varMix.$white;
+            }
+
+            p {
+                color         : varMix.$white;
+                line-height   : 30px;
+                padding-bottom: varMix.$p-2;
+            }
+
+            .btns {
+                display: flex;
+                gap    : 30px;
+
+                .btn1 {
+                    @extend %button;
+                    @include varMix.setBtnbg;
+
+                    &:hover {
+                        @include varMix.hoverBg(varMix.$deepteal);
+                    }
+                }
+
+                .btn2 {
+                    @extend %button;
+                    @include varMix.setBtnbg(rgb(varMix.$white, 0.4));
+
+                    &:hover {
+                        @include varMix.hoverBg(varMix.$white);
+                        color: varMix.$black;
+                    }
+                }
+            }
+        }
+    }
+}

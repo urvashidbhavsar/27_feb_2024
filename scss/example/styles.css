@@ -1,0 +1,87 @@
+.homepage:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.homepage .home-data .home-info .btns .btn1, .homepage .home-data .home-info .btns .btn2 {
+  padding: 15px 35px;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.homepage {
+  background: url(https://www.goodwall.io/blog/wp-content/uploads/2023/05/best-coding-websites.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.homepage:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(3, 29, 29, 0.8);
+  z-index: -1;
+}
+.homepage .home-data {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.homepage .home-data .home-info h5 {
+  font-size: calc(1vw + 16px);
+  padding-bottom: 10px;
+  color: white;
+}
+.homepage .home-data .home-info h1 {
+  font-size: calc(2.5vw + 24px);
+  padding-bottom: 10px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+.homepage .home-data .home-info p {
+  color: white;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+.homepage .home-data .home-info .btns {
+  display: flex;
+  gap: 30px;
+}
+.homepage .home-data .home-info .btns .btn1 {
+  background-color: #075959;
+  border: 2px solid #075959;
+  color: white;
+  transition: 0.5s ease;
+}
+.homepage .home-data .home-info .btns .btn1:hover {
+  border: 2px solid #031d1d;
+  background-color: #031d1d;
+}
+.homepage .home-data .home-info .btns .btn2 {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  transition: 0.5s ease;
+}
+.homepage .home-data .home-info .btns .btn2:hover {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}/*# sourceMappingURL=styles.css.map */

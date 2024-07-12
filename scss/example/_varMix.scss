@@ -1,0 +1,45 @@
+// for colors 
+$white    :white;
+$black    : black;
+$darkteal :#075959;
+$deepteal :#031d1d;
+$gray     :gray;
+
+$font-1:calc(2.5vw + 24px);
+$font-2:calc(2vw + 20px);
+$font-3:calc(1.5vw + 16px);
+$font-4:calc(1vw + 16px);
+
+$p-1:10px;
+$p-2:20px;
+$p-3:30px;
+$p-4:40px;
+$p-5:50px;
+
+// create inheritance 
+%positions {
+    top   : 0;
+    left  : 0;
+    right : 0;
+    bottom: 0;
+}
+
+// for button
+%button {
+    padding      : 15px 35px;
+    font-size    : 16px;
+    border-radius: 40px;
+    cursor       : pointer;
+}
+
+@mixin setBtnbg($bg:$darkteal) {
+    background-color: $bg;
+    border          : 2px solid $bg;
+    color           : $white;
+    transition      : 0.5s ease;
+}
+
+@mixin hoverBg($bg:$darkteal) {
+    border          : 2px solid $bg;
+    background-color: $bg;
+}
