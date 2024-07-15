@@ -1,0 +1,35 @@
+@width-1: 100px + 2px;
+@width-2: 5cm + 10mm;
+@width-3: 5vw * 10%;
+@color-1: #554455 + #12a;
+@color-2: blue - indigo;
+@color-3: blue * indigo;
+@color-4: (#443322 / 2);
+
+div {
+    margin: 10px;
+}
+
+.div1 {
+    height          : 100px;
+    width           : @width-1;
+    background-color: @color-1;
+}
+
+.div2 {
+    height          : 100px;
+    width           : @width-2;
+    background-color: @color-2;
+}
+
+.div3 {
+    height          : 100px;
+    width           : @width-3;
+    background-color: @color-3;
+}
+
+.div4 {
+    height          : 100px;
+    width           : @width-3;
+    background-color: @color-4;
+}

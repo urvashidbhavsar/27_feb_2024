@@ -1,0 +1,28 @@
+@navy  : navy;
+@salmon: salmon;
+@teal  : teal;
+@white : white;
+
+// mixin 
+.setborder {
+    width           : 50%;
+    padding         : 20px;
+    font-size       : 20px;
+    background-color: @salmon;
+    color           : @white;
+}
+
+.main {
+    display: flex;
+    gap    : 20px;
+}
+
+.box:nth-child(1) {
+    .setborder();
+    border: 2px solid @navy;
+}
+
+.box:nth-child(2) {
+    .setborder();
+    border: 2px solid @navy;
+}
