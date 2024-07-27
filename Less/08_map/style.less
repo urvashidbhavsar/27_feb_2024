@@ -1,0 +1,34 @@
+@import "var.less";
+
+// create map 
+#div() {
+    space: 30px;
+    bdr  : 1px solid gray;
+    w-1  : 300px;
+}
+
+.mydiv {
+    // use of map
+    padding: #div[space];
+    width  : #div[w-1];
+    border : #div[bdr];
+}
+
+.bgColor {
+    background-color: rgb(58, 213, 58);
+}
+
+.parent {
+    @color: blue;
+    &:extend(.bgColor);
+
+    .child {
+        color: @color;
+    }
+
+    color: @color;
+}
+
+h1 {
+    color: @color;
+}
